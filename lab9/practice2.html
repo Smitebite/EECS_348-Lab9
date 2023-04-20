@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <h1>Change The Font</h1>
+</head>
+
+<body>
+    <style>
+        #paragraph {
+            border-style: solid;
+            border-width: 6;
+        }
+    </style>
+    <div id="paragraph"> Change me Please! </div>
+    <script>
+        function alert_paragraph_color() {
+            var border_R = document.getElementById("border_R").value;
+            var border_G = document.getElementById("border_G").value;
+            var border_B = document.getElementById("border_B").value;
+            var border_width = document.getElementById("border_width").value;
+            var bg_R = document.getElementById("bg_R").value;
+            var bg_G = document.getElementById("bg_G").value;
+            var bg_B = document.getElementById("bg_B").value;
+
+            var tag = document.getElementById("paragraph");
+            tag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`;
+            tag.style.borderWidth = border_width
+            tag.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`;
+        }
+
+    </script>
+    <font size="3px" color="red">
+        Border Red(0-255):
+    </font>
+    <input type="text" id="border_R" value>
+    <br>
+    <font size="3px" color="green">
+        Border Green(0-255):
+    </font>
+    <input type="text" id="border_G" value>
+    <br>
+    <font size="3px" color="blue">
+        Border Blue(0-255):
+    </font>
+    <input type="text" id="border_B" value>
+    <br>
+    Border Width:
+    <input type="text" id="border_width" value>
+    <br>
+    <font size="3px" color="red">
+        Background Red (0-255):
+    </font>
+    <input type="text" id="bg_R" value>
+    <br>
+    <font size="3px" color="green">
+        Background Green(0-255):
+    </font>
+    <input type="text" id="bg_G" value>
+    <br>
+    <font size="3px" color="blue">
+        Background Blue(0-255):
+    </font>
+    <input type="text" id="bg_B" value>
+    <br>
+    <button onclick="alert_paragraph_color()">Alter the paragraph font</button>
+    <br>
+</body>
+</htmml>
